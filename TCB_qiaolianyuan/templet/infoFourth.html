@@ -1,0 +1,17 @@
+<span class="s2"></span>
+<div id="l2div-left">
+	<p>热门问题：</p>
+	<p>其他问题：</p>
+</div>
+<div id="l2div-right">
+	<div id="l2div-top">
+		<%for(var n=0;n<result.hot.length;n++){%>
+			<a href=""><%=result.hot[n].name%></a>
+		<%}%>
+	</div>
+	<div id="l2div-bottom">
+		<%for(var j=0;j<result.other.length;j++){%>
+			<a href=""><%=result.other[j].name%></a>
+		<%}%>
+	</div>
+</div>

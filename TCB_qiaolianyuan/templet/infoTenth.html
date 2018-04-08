@@ -1,0 +1,37 @@
+<%for(var n=0;n<shop_data.length;n++){%>
+<div class="list_item">
+	<div class="pic">
+		<a href="#"><img src="<%=shop_data[n].shop_ico%>" width="70" height="70"></a>
+	</div>
+	<div class="cont">
+		<h3>
+			<a target="_blank" href="#"><%=shop_data[n].shop_name%></a>
+			<div class="shop_grade">店铺等级：
+				<a href="/c/help/#cont101" title="5级">
+					<span class=" icon_dj1"></span>
+					<span class=" icon_dj1"></span>
+					<span class=" icon_dj1"></span>
+					<span class=" icon_dj1"></span>
+					<span class=" icon_dj1"></span>
+				</a>
+			</div>
+		</h3>
+		<div class="desc"><%=shop_data[n].shop_desc%>
+		</div>
+		<div class="addri"><%=shop_data[n].addr%>
+		</div>
+		<div class="shop_score">
+			<div class="shop_pf">
+				<span title="出现服务纠纷，360同城帮先行赔付您支付的全额" class=" icon_xxpf"></span>先行赔付
+			</div>
+			<div class="shop_rz">
+				<span class="icon_us" title="同城帮认证"></span>同城帮认证
+			</div>
+			<div class="shop_rq">
+				成交量: <span><%=shop_data[n].shop_visit%></span>次成交
+			</div>
+		</div>
+		<a class="into_shop" data-text="进入店铺" href="#">进入店铺</a>
+	</div>
+</div>
+<%}%>

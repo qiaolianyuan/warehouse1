@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "../js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src= "../js/jquery.lazyload.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			margin: 0 auto;
+			width: 100%;
+		}
+		div img{
+			vertical-align: middle;
+			width: 1600px;
+			height: 800px;
+		}
+	</style>
+</head>
+<body>
+	<!--懒加载主要思路就是按用户需要，逐步加载内容，而非一次性加载完毕，减少用户初次访问时间
+		触发后续的加载方式
+		1、计时器延时加载
+		2、事件驱动的加载，点击等。
+		3、可见区域识别。
+	-->
+
+	<!-- 替换掉src属性。使用data-original -->
+	<!-- 图片必须设置一个宽度 流体或者像素-->
+	<div>
+		<img data-original="imgs/1.jpg">
+		<img data-original="imgs/2.jpg">
+		<img data-original="imgs/3.jpg">
+		<img data-original="imgs/4.jpg">
+	</div>
+</body>
+<script type="text/javascript">
+	//使用懒加载插件
+	$("img").lazyload({
+
+	});
+
+	// //监听滚动
+	// window.onscroll = function(){
+	// 	$("img[data-original]").each(function(index,item){
+	// 		if(item.getBoundingClientRect().top<document.documentElement.clientHeight){
+	// 			$(this).attr("src",$(this).attr("data-original")).removeAttr("data-original");
+	// 		}
+	// 	})
+	// };
+</script>
+</html>

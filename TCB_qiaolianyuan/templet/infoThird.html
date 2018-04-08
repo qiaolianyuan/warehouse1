@@ -1,0 +1,14 @@
+<span class="s1"></span>
+<%for(var n=0;n<result.length;n++){%>
+	<div class="l1-row clearFloat">
+		<div class="l1div-left">
+			<%=result[n].name%> <span>></span>
+		</div>
+		<%for(var j=0;j<result[n].list.length;j++){%>
+			<div class="l1div-right">
+				<a href=""><%=result[n].list[j].name%></a>
+			</div>
+		<%}%>
+	</div>
+<%}%>
+	

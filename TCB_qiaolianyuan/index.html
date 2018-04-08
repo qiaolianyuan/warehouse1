@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src = "js/baiduTemplate.js"></script>
+	<script type="text/javascript" src = "js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src= "js/jquery.lazyload.js"></script>
+	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.4.4&key=06fb75f531ce19fd2af711465487d07a&&plugin=AMap.Scale,AMap.OverView,AMap.ToolBar,AMap.Autocomplete"></script>
+
+</head>
+<body>
+	<div class="header">
+		<div class="container1">
+			<div class="head_left">
+				<ul>
+					<li>
+						<span class="city">北京</span>
+						<a class="citychange" href="#">[切换城市]</a>
+					</li>
+					<li><a href="#">同城帮首页</a></li>
+				</ul>
+			</div>
+			<div class="head_right">
+				<ul>
+					<li><a href="#" class="head_login">登录</a></li>
+					<li><a href="#" class="head_zhuce">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li><span><a href="#">在线客服</a>(9:00-21:00)</span></li>
+					<li class="fuwu"><span class="item">客户服务</span><div class="select"><p><a href="#">帮助中心</a></p><p><a href="#">维修付款</a></p></div></li>
+					<li><a href="#">论坛</a></li>
+					<li><a href="#">投诉建议</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="top container">
+		<div class="logo">
+			<a href="#" class="tong"></a>
+		</div>
+		<ul>
+			<li><a href="#" class="one">二手优品<span class="hot"></span></a></li>
+			<li><a href="#">手机回收</a></li>
+			<li><a href="#">手机维修</a></li>
+			<li><a href="#">电脑维修</a></li>
+			<li><a href="#">以旧换新</a></li>
+			<li><a href="#">手机租用</a></li>
+		</ul>
+	</div>
+
+
+	<div id="banner_one">
+		<div id="banner">
+			<a href="#" id="lunbo"><img src="http://p8.qhmsg.com/t01f33137f9dde655ce.png"></a>
+			<div class="slide-ctrl">
+				<span class="ctrl-item ctrl-curr" data-sn="0"></span>
+				<span class="ctrl-item" data-sn="1"></span>
+				<span class="ctrl-item" data-sn="2"></span>
+				<span class="ctrl-item" data-sn="3"></span>
+			</div>
+			<ul class="bannerUl">
+				<li class="l1">
+					<a href="" id="xiu1">修手机/Pad</a>
+					<div class="l1div">
+						
+						
+					</div>
+				</li>
+
+				<li class="l2">
+					<a href="" id="xiu2">修电脑</a>
+					<!-- 二级菜单	 -->
+					<div class="l2div">
+						
+						
+					</div>
+				</li>
+				<li class="l3">
+					<a href="" id="xiu3">卖手机/电脑</a>
+					<div class="l3div">
+						
+					</div>
+				</li>
+				<li class="l4">
+					<a href="" id="xiu4">买二手机</a>
+					<div class="l4div">
+					
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="outer">
+		<div class="banner_two container">
+			<div class="i">
+				<a href="#">
+					<img data-original="https://p.ssl.qhimg.com/t01aad5c130b8653368.jpg">
+				</a>
+			</div>
+			<div class="i">
+				<a href="#">
+					<img data-original="https://p.ssl.qhimg.com/t01dc8f9631026e7e17.jpg">
+				</a>
+			</div>
+			<div class="i">
+				<a href="#">
+					<img data-original="https://p.ssl.qhimg.com/t013b648422d14559d0.png">
+				</a>
+			</div>
+			<div class="i">
+				<a href="#">
+					<img data-original="https://p.ssl.qhimg.com/t01fc1fd0e5522663ba.jpg">
+				</a>
+			</div>
+		</div>
+
+
+		<div class="main_one container">
+			<div class="titone">
+				<div class="titone_inner">
+					<h2>热门手机回收</h2>
+					<a href="#">查看更多</a>
+				</div>
+			</div>
+			<div class="cnt">
+				<div class="zuo">
+					<a href="#"></a>
+				</div>
+				<div class="you">
+					<ul class="hotList" id="ulOne">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main_two container">
+			<div class="tittwo">
+				<div class="tittwo_inner">
+					<h2>优品精选</h2>
+					<a href="#">查看更多</a>
+				</div>
+			</div>
+			<div class="cnt">
+				<div class="zuo1">
+					<a href="#"></a>
+				</div>
+				<div class="you">
+					<ul class="hotList" id="ulTwo">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="main_three container">
+			<div class="titthree">
+				<div class="tittwo_inner">
+					<h2>到店维修</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_four container">
+		<div class="main_left">
+			<div class="shopfilter">
+				<div class="row">
+					<div class="left_col">
+						<div class="area">
+							<div class="selcity" code="bei_jing">
+								<span class="sel_txt" data-code="bei_jing">北京</span>
+								<span class="pngfix"></span>
+							</div>
+							<div class="selquxian">
+								<span class="sel_txt">选择区县</span>
+								<span class="pngfix"></span>
+							</div>
+						</div>
+					</div>
+					<div class="right_col">
+						<div class="addr">
+							<form>
+								<input class="addr_ipt default" name="addr" placeholder="输入您的位置查找附近的商家" value="">
+								<input class="addr_btn" type="submit" value="搜索">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="shopwrap">
+				<div class="shoptop">
+					<ul class="sort">
+						<li class="li_first">
+							<a href="#" class="sort_default" data-type>
+								<span class="icon_window"></span> 默认排序
+							</a>
+						</li>
+						<li>
+							<a href="#" class="sort_sale" data-type="1">
+								<span class="icon_dl"></span> 按成交量
+							</a>  
+						</li>
+						<li>
+							<a href="#" class="sort_pop" data-type="3">
+								<span class="icon_thumb"></span> 按人气
+							</a>
+						</li>
+					</ul>
+					<div class="filter_check">
+					  	<label>
+					  		<input class="chkbox" type="checkbox" name="is_bzj">先行赔付
+					  	</label>
+					</div>
+					<div class="extra" style="display:block">
+						<a  href="#" class="btn_map">地图模式</a>
+					</div>
+				</div>
+				<div class="shopmain">
+					
+				</div>
+				<div class="shop_pagination">
+					<div id="page">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="main_right">
+			<div class="haoping_list">
+				<h3 class="tit">商家好评榜</h3>
+				<div class="cont_list">
+					<div class="list_items">
+						<div class="s_red">①</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p7.qhimg.com/edr/140__140/ss/30_105/t01ac02fad9b0458ec4.jpg" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="联金诚维修中心">联金诚维修中心</a>
+						    </h3>
+						    <p>121968条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_red">②</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p9.qhimg.com/edr/140__140/ss/30_105/t017106a8e035ee20cd.jpg" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="顺通电脑维修">顺通电脑维修</a>
+						    </h3>
+						    <p>111977条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_red">③</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p4.qhimg.com/edr/140__140/ss/30_105/t01e711a21f9c1817ee.gif" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="盛宏科技CBD维修工作室">盛宏科技CBD维修工作室</a>
+						    </h3>
+						    <p>98582条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_black">④</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p0.qhimg.com/edr/140__140/ss/30_105/t015485b0b3d73024ab.jpg" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="百佳电脑维修">百佳电脑维修</a>
+						    </h3>
+						    <p>50689条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_black">⑤</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p1.qhimg.com/edr/140__140/ss/30_105/t01d393b539d5466914.gif" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="鸿翔科技（北京）有限公司">鸿翔科技（北京）有限公司</a>
+						    </h3>
+						    <p>32439条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_black">⑥</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p0.qhimg.com/edr/140__140/ss/30_105/t01153761b9a9fa7548.jpg" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="北京开天科技维修中心">北京开天科技维修中心</a>
+						    </h3>
+						    <p>15215条评论</p>
+				    	</div>
+					</div>
+					<div class="list_items">
+						<div class="s_black">⑦</div>
+					  	<div class="pic_">
+						    <a target="_blank" href="#">
+						    	<img src="http://p1.qhimg.com/edr/140__140/ss/30_105/t01d069a31e337772f6.gif" width="32" height="32">
+						    </a>
+					  	</div> 
+					   	<div class="ie6cont">
+						    <h3>
+						    	<a target="_blank" href="#" title="忠信电脑维修">忠信电脑维修</a>
+						    </h3>
+						    <p>12214条评论</p>
+				    	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer_nav">
+			<table class="box">
+				<tbody>
+					<tr>
+						<td>
+							<span class="buy"></span>
+							<div class="f_right">
+								<h3>购物指南</h3>
+								<a href="#">购物流程</a>
+								<a href="#">帮助文档</a>
+							</div>
+						</td>
+						<td>
+							<span class="pay"></span>
+							<div class="f_right">
+								<h3>支付方式</h3>
+								<a href="#">在线支付,当面付款</a>
+							</div>
+						</td>
+						<td>
+							<span class="server"></span>
+							<div class="f_right">
+								<h3>售后服务</h3>
+								<a href="#">投诉建议</a>
+								<a href="#">售后说明</a>
+							</div>
+						</td>
+						<td>
+							<span class="company"></span>
+							<div class="f_right">
+								<h3>商家合作</h3>
+								<a href="#" class="join">加盟同城帮</a>
+								<a href="#">新闻采访/扩界合作</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="last">
+			<p class="link">
+			    <span class="lastspan" style="padding:0 10px">客服电话：4000-399-360 / 010-53767360</span>
+			    <a class="lasta " style="padding:0 0 0 10px" href="#">投诉建议</a> 
+			    <a href="#">网站地图</a>
+		    </p>
+		    <p>Copyright © 2005-2018360.CNAll Rights Reserved360安全中心</p>
+		    <p><a href="#">京ICP备08010314号-19</a>京公网安备110000000006号</p>
+		</div>
+	</div>
+	<div class="fix"><a href="#" class="btn"></a></div>
+	<a class="f_a" href="#" style="visibility: visible; bottom: 42px; right: 10px;"></a>
+	<!-- 城市切换 -->
+	<div class="pop_city"></div>
+
+	<!-- 区县切换 -->
+	<div class="sel-quxian">
+		
+	</div>
+
+
+
+		
+	<!-- 登录 -->
+	<div class="login">
+		<div class="lo_head">
+			<div class="lo_inner"><span>欢迎登录360同城帮</span></div>
+			<a href="#" class="lo_close"><i>关闭</i></a>
+		</div>
+		<div class="lo_body">
+			<div class="tip">
+				<p class="tip_p"></p>
+			</div>
+			<div class="lo_main">
+				<form method="POST" class="lo_form">
+					<p class="p_one">
+						<label class="label_one" for="quc_account_447807208">帐&nbsp;&nbsp;&nbsp;号</label>
+						<span class="span_one">
+							<input class="input_one" type="text" name="account" placeholder="手机号/用户名/邮箱" maxlength="50" autocomplete="off" id="quc_account_447807208">
+						</span>
+					</p>
+					<p class="p_two">
+						<label class="label_two" for="quc_password_447807209">密&nbsp;&nbsp;&nbsp;码</label>
+						<span class="span_two">
+							<input class="input_two" type="password" name="account" placeholder="请输入您的密码" maxlength="50" autocomplete="off" id="quc_password_447807209">
+						</span>
+					</p>
+					<p class="p_three">
+						<label>
+							<input class="input_three" type="checkbox" name="iskeepalive" checked="checked">下次自动登录
+						</label>
+					</p>
+					<p class="p_four">
+						<input type="submit" value="登录" class="input_four">
+					</p>
+					<p class="p_five">
+						<span>其他帐号登录：</span>
+						<span class="span_other">
+							<a href="#" class="a_weibo" title="新浪微博登录"></a>
+							<a href="#" class="a_renren" title="人人登录"></a>
+						</span>
+					</p>
+				</form>
+			</div>
+			<div class="lo_footer">
+				<a class="reset_new" href="#">注册新帐号</a>
+				<a class="forget_psd" href="#" target="_blank">忘记密码？</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 注册 -->
+	<div class="zhuce">
+		<div class="zc_head">
+			<div class="zc_inner">欢迎注册360同城帮</div>
+			<a href="#" class="zc_close"><i>关闭</i></a>
+		</div>
+		<div class="zc_body">
+			<div class="zc_main">
+				<div class="zc_left">
+					<ul class="zc_ul">
+						<li class="zc_lione">
+							<a href="#" class="nbone" id="phones">
+								<i class="zc_ione"></i>手机注册
+							</a>
+						</li>
+						<li class="zc_litwo" id="emails">
+							<a href="#" class="nbtwo">
+								<i class="zc_itwo"></i>邮箱注册
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="zc_right">
+					<div class="zc_tip">
+						<p class="tip_pp"></p>
+					</div>
+					<form class="zc_form" method="POST" action="">
+						<div>
+							<p class="p_zcone">
+								<label class="label_zcone" for="quc_account_458876690">手机号</label>
+								<span class="span_zcone">
+									<input class="input_zcone" type="tel" name="account" data-name="mobile" maxlength="11" id="quc_account_458876690">
+								</span>
+								<i class="i_zcone"></i>
+								<span class="span_zctwo" data-default-tip="请输入您的手机号">请输入您的手机号
+								</span>
+							</p>
+							<p class="p_zctwo" style="display: block;">
+								<label class="label_zctwo" for="quc_captcha_458876691">验证码</label>
+								<span class="span_zcthree">
+									<input class="input_zctwo" type="text" name="captcha" maxlength="7" autocomplete="off" id="quc_captcha_458876691">
+								</span>
+								<img class="zc_img" alt="验证码" title="点击更换" tabindex="99" src="http://passport.360.cn/captcha.php?m=create&amp;app=i360&amp;scene=strictreg&amp;userip=&amp;level=default&amp;sign=5a63a7&amp;r=1517883433&amp;_=1517883431213">
+								<a class="zc_a" href="#">换一张</a>
+								<i class="i_zctwo"></i>
+								<span class="span_zcfour" data-default-tip="请输入图中的字母或数字，不区分大小写">请输入图中的字母或数字，不区分大小写</span>
+							</p>
+							<p class="p_zcthree">
+								<label class="label_zcthree" for="quc_smscode_458876692">校验码</label>
+								<span class="span_zcfive">
+									<input class="input_zcthree" type="text" name="smscode" data-name="smsToken" maxlength="6" id="quc_smscode_458876692">
+								</span>
+								<a href="#" class="zc_aa">免费获取校验码</a>
+								<i class="i_zcthree"></i>
+								<span class="span_zcsix" data-default-tip="请输入短信中6位数字校验码">请输入短信中6位数字校验码</span>
+								<a class="zc_aaa" href="http://i.360.cn/help/smscode" target="_blank" tabindex="99">校验码常见问题</a>
+							</p>
+							<p class="p_zcfour">
+								<label class="label_zcfour" for="quc_password_458876693">密码</label>
+								<span class="span_zcseven">
+									<input class="input_zcfour" type="password" name="password" maxlength="22" id="quc_password_458876693">
+								</span>
+								<i class="i_zcfour"></i>
+								<span class="span_zceight" data-default-tip="8-20个字符(区分大小写)">8-20个字符(区分大小写)</span>
+							</p>
+						</div>
+						<p class="p_zcfive">
+							<input class="input_zcfive" type="submit" value="立即注册">
+						</p>
+						<p class="p_zcsix">
+							<label>
+								<input class="input_zcsix" type="checkbox" name="is_agree" data-name="agreeLicence" checked="checked">
+								<span>我已经阅读并同意
+									<a class="ac_aaaa" href="#" target="_blank">《360用户服务条款》</a>
+								</span>
+							</label>
+						</p>
+						<p class="p_zcseven">已有帐号，
+							<a href="#" class="zc_aaaaa">立即登录</a>
+						</p>
+					</form>
+
+
+
+					<form class="zc_form1" method="POST" action="">
+						<div>
+							<p class="p_zcone1">
+								<label class="label1" for="quc_account_458876696">邮箱</label>
+								<span class="span1">
+									<input class="input1" type="text" name="account" data-name="email" autocomplete="off" id="quc_account_458876696">
+								</span>
+								<i class="i1"></i>
+								<span class="span2" data-default-tip="请输入您的常用邮箱，<a class=&quot;quc-link&quot; href=&quot;http://email.163.com/&quot; target=&quot;_blank&quot; tabindex=&quot;99&quot;>没有邮箱？</a>">请输入您的常用邮箱，
+									<a class="a1" href="http://email.163.com/" target="_blank" tabindex="99">没有邮箱？</a>
+								</span>
+							</p>
+							<p class="p_zcfour">
+								<label class="label_zcfour" for="quc_password_458876693">密码</label>
+								<span class="span_zcseven">
+									<input class="input_zcfour" type="password" name="password" maxlength="22" id="quc_password_458876693">
+								</span>
+								<i class="i_zcfour"></i>
+								<span class="span_zceight" data-default-tip="8-20个字符(区分大小写)">8-20个字符(区分大小写)</span>
+							</p>
+						</div>
+						<p class="p_zcfive">
+							<input class="input_zcfive" type="submit" value="立即注册">
+						</p>
+						<p class="p_zcsix">
+							<label>
+								<input class="input_zcsix" type="checkbox" name="is_agree" data-name="agreeLicence" checked="checked">
+								<span>我已经阅读并同意
+									<a class="ac_aaaa" href="#" target="_blank">《360用户服务条款》</a>
+								</span>
+							</label>
+						</p>
+						<p class="p_zcseven">已有帐号，
+							<a href="#" class="zc_aaaaa">立即登录</a>
+						</p>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 地图 -->
+	<div class="map">
+		<div class="hd"><h3>地图模式</h3></div>
+		<span class="close_map"></span>
+		<div id="maps">
+			
+		</div>
+		<div id="footer_num">
+			
+		</div>
+	</div>
+	<!-- 遮罩 -->
+	<div class="lightBox"></div>
+
+</body>
+<script type="text/javascript" src = "js/index.js"></script>
+</html>

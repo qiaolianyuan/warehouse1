@@ -1,0 +1,15 @@
+<!-- 模板2 -->
+<!-- 循环显示-->
+<%for(var n=0;n<result.length;n++){%>
+	<li class="itema">
+		<a href="#">
+			<div class="p_img">
+				<img data-original="<%=result[n].thum_img.big%>" width="160" height="160">
+			</div>
+			<div class="p_name"><%=result[n].brand_name+result[n].model_name%></div>
+			<div class="p_price">￥<%=result[n].price%></div>
+		</a>
+	</li>
+<%}%>
+						
+		
